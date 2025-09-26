@@ -9,11 +9,10 @@ public class ReverseInteger {
                 reverse < Integer.MIN_VALUE / 10)
                     return 0;
 
-                int digit = x % 10 ? x > 0 : x % -10;
+            int digit = x > 10 ? x % 10 : x % -10;
             reverse = reverse * 10 + digit;
             x /= 10;
         }
-        // if (org < 0) res = -(-res);
         return reverse;
     }
 }
